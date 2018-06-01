@@ -7,6 +7,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script>
+        window.Laravel = { csrfToken: '{{ csrf_token() }}' }
+    </script>
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -34,7 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <search-component></search-component>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

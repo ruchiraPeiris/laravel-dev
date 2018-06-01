@@ -18,6 +18,8 @@ Route::get('/search', 'Api\SearchController@search');
 
 Route::apiResource('/posts', 'PostController');
 
+Route::apiResource('/dropzone', 'DropzoneController');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
